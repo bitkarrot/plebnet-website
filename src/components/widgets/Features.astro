@@ -22,7 +22,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="scroll-mt-16" id="features">
+<section class="scroll-mt-16 bg-blue-50 dark:bg-slate-900 py-16 md:py-20" id="features">
   <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
     {
       (title || subtitle || highlight) && (
@@ -53,7 +53,7 @@ const {
             {subitems.map(({ title, description, icon }) => (
               <div class="flex flex-row max-w-md">
                 <div class="mb-4 mr-4">
-                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-blue-700">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-orange-500">
                     {icon && <Icon name={icon} class="w-6 h-6 text-white icon-light" />}
                   </div>
                 </div>

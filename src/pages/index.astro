@@ -2,14 +2,15 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-// import Hero2 from '~/components/widgets/Hero2.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+//import Hero from '~/components/widgets/Hero.astro';
 //import Steps2 from '~/components/widgets/Steps2.astro';
 //import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import FeaturesLink from '~/components/widgets/FeaturesLink.astro';
 import Features from '~/components/widgets/Features.astro';
-import { Picture } from '@astrojs/image/components';
+//import { Picture } from '@astrojs/image/components';
 import { headerData } from '~/data';
 
 const meta = {
@@ -34,9 +35,10 @@ const meta = {
 
   <!-- Hero2 Widget ******************* -->
 
-  <Hero
+  <Hero2
     callToAction={{ text: 'Join Us', href: '/join' }}
     callToAction2={{ text: 'Learn More', href: '#more' }}
+    image={{ src: import('~/assets/images/electricbitcoin.webp'), alt: 'Plebnet.dev Hero Image' }}
   >
     <Fragment slot="title">
       Build the <br/> 
@@ -55,11 +57,12 @@ const meta = {
     </Fragment>
   </Hero2>
 
-  <Fragment>
+  <!-- <Fragment>
     <Picture
             src={import('/public/images/electricbitcoin.webp')}
             class="max-w-full lg:max-w-6xl mx-auto mb-6 sm:rounded-md bg-gray-400 dark:bg-slate-700"
             widths={[400, 900]}
+            alt="Bitcoin Hero Image"
             sizes="(max-width: 900px) 400px, 900px"
             loading="eager"
             aspectRatio={16 / 9}
@@ -70,13 +73,13 @@ const meta = {
             background={undefined}
           />
     </Fragment>
-
+ -->
 
   <span id="more"> </span>
   <!-- Featues Widget **************** -->
 
   <Features
-  highlight="Features"
+  highlight=""
   title="Engage with Developers Worldwide"
   subtitle="Who is Plebnet.dev for?"
   items={[
@@ -147,6 +150,9 @@ const meta = {
       Who is Plebnet.dev for? 
     </Fragment>
   </Content> -->
+
+
+
 
    <!-- CallToAction Widget *********** -->
    <CallToAction
