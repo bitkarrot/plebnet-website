@@ -91,15 +91,17 @@ const {
       <div class="basis-1/2">
             <div class="relative m-auto max-w-5xl">
                 <Picture
+                  src={image.src}
                   class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  widths={[400, 900]}
+                  sizes="(max-width: 900px) 400px, 900px"
                   aspectRatio={600 / 600}
                   loading="eager"
+                  decoding="async"
                   width={600}
                   height={600}
+                  background={undefined}
                   alt="Plebnet.dev"
-                  src={image.src}
                 />
             </div>
       </div>
